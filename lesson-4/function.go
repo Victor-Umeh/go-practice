@@ -2,40 +2,40 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"reflect"
-	"strings"
 )
 
+
+const authorName = "Damian Ezeh"
 //main function, entry point for all go programs
 func main() {
-	// var name string
+	var name string
 
-	// //call greetUser function
- 	// greetUser()
+	//call greetUser function
+ 	greetUser()
 
-	// fmt.Println("Enter your name:")
-	// fmt.Scan(&name)
-	// greetUserWithName(name)
+	fmt.Println("Enter your name:")
+	fmt.Scan(&name)
+	greetUserWithName(name)
+	showAuthorName()
 
-	var books = []string{}
-	books = append(books, "Things fall apart", "Game of thrones", "Willy will")
+	// var books = []string{}
+	// books = append(books, "Things fall apart", "Game of thrones", "Willy will")
 
-	firstTitle := []string{}
-	//for Each loop
-	for _, book := range books {
-		var main = strings.Fields(book)
-		fmt.Println(main[0])
-		firstTitle = append(firstTitle, main[0])
-	}
+	// firstTitle := []string{}
+	// //for Each loop
+	// for _, book := range books {
+	// 	var main = strings.Fields(book)
+	// 	fmt.Println(main[0])
+	// 	firstTitle = append(firstTitle, main[0])
+	// }
 
-	fmt.Println(firstTitle)
-	fmt.Println(reflect.TypeOf(firstTitle))
+	// fmt.Println(firstTitle)
+	// fmt.Println(reflect.TypeOf(firstTitle))
 
 
-	//A func that takes in a list of numbers and returns a new list with eash number ++
-	numsArr  := []int {1,2,0,3,4,5}
-	fmt.Println(increaseByOne(numsArr))
+	 //A func that takes in a list of numbers and returns a new list with eash number ++
+	// numsArr  := []int {1,2,0,3,4,5}
+	// fmt.Println(increaseByOne(numsArr))
 
 	//*** loops ***
 
@@ -47,18 +47,18 @@ func main() {
 	// }
 
 	//for loop
-	for i:= 1; i <= 10 ; i++ {
-		fmt.Println(i)
-	} 
+	// for i:= 1; i <= 10 ; i++ {
+	// 	fmt.Println(i)
+	// } 
 
-	name_1, name_2, name_3 := returnNamesVariables()
-	fmt.Println(name_1, name_2, name_3)
+	// name_1, name_2, name_3 := returnNamesVariables()
+	// fmt.Println(name_1, name_2, name_3)
 
-	var day string
+	// var day string
 	
-	log.Println("Enter a day")
-	fmt.Scan(&day)
-	fmt.Println(getDay(day))
+	// log.Println("Enter a day")
+	// fmt.Scan(&day)
+	// fmt.Println(getDay(day))
 
 }
 
@@ -75,10 +75,6 @@ func returnNamesVariables()(string, string, string) {
 //create greetUser function
 func greetUser() {
 	fmt.Println("Hello World!")
-}
-
-func greetUserWithName(name string) {
-	fmt.Printf("Hello %v", name)
 }
 
 //a function that take in an slice and returns a new slice
